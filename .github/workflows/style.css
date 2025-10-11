@@ -1,0 +1,124 @@
+
+:root {
+    --primary-color: #007BFF;      
+    --background-color: #F0F8FF;   
+    --text-color: #212529;         
+    --white: #FFFFFF;
+    --font-family: 'Inter', sans-serif;
+   -- font-weight-normal: 400;
+   -- font-weight-semibold: 600;
+   -- font-weight-bold: 700;
+}
+
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: var(--font-family);
+    font-weight: var(--font-weight-normal);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+.header {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo h1 {
+    margin: 0;
+    font-size: 1.8rem;
+    font-weight: var(--font-weight-bold);
+}
+
+.navbar a {
+    color: var(--white);
+    text-decoration: none;
+    margin-left: 1rem;
+    font-weight: var(--font-weight-semibold);
+    transition: opacity 0.3s ease;
+}
+
+.navbar a:hover {
+    opacity: 0.8;
+}
+
+
+.content-section {
+    background-color: var(--white);
+    padding: 2rem;
+    margin: 2rem auto;
+    border-radius: 8px;
+    max-width: 1000px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.about-container,
+.personality-container,
+.hero-container,
+.development-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    align-items: flex-start;
+}
+
+.about-image img {
+    border-radius: 8px;
+    max-width: 100%;
+    height: auto;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.table-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+th, td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+
+.footer {
+    background-color: var(--primary-color);
+    color: var(--white);
+    text-align: center;
+    padding: 1rem;
+    margin-top: 3rem;
+}
+
+@media (max-width: 600px) {
+    .about-container,
+    .personality-container,
+    .hero-container,
+    .development-container {
+        flex-direction: column;
+    }
+
+    .navbar {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+        margin-top: 1rem;
+    }
+}
